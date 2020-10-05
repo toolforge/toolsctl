@@ -1,0 +1,11 @@
+---
+ldap:
+  servers:
+    - localhost
+  user: cn=admin,dc=wmftest,dc=net
+  password: vagrant_admin
+  basedn: dc=wmftest,dc=net
+project: tools
+gid:
+  min: 50000
+  max: 59999
