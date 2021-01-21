@@ -140,7 +140,7 @@ def get_next_gid(conn, args):
         generator=True,
     )
     next_id = max(
-        max(int(g["attributes"]["gidNumber"][0]) for g in r) + 1,
+        max(int(g["attributes"]["gidNumber"]) for g in r) + 1,
         args.config["gid"]["min"]
     )
     if next_id > args.config["gid"]["max"]:
